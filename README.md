@@ -17,7 +17,6 @@ A web application for searching documents using Pinecone vector database with su
 ├── app/                  # Main application directory
 │   ├── app.py            # Main application file
 │   ├── server.py         # Server logic and API routes
-│   ├── static/           # Static files (CSS, JS, etc.)
 │   └── templates/        # HTML templates
 │       └── base.html     # Main HTML template
 ├── scripts/              # Utility scripts
