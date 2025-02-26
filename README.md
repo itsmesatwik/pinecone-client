@@ -1,6 +1,9 @@
-# Pinecone Search Application
+# Pinecone Client
 
 A web application for searching documents using Pinecone vector database with support for reranking models.
+
+<img width="1226" alt="image" src="https://github.com/user-attachments/assets/a3f93db4-2b8e-438e-908a-1fe2057090cb" />
+
 
 ## Features
 
