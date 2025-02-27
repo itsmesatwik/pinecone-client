@@ -14,7 +14,7 @@ load_dotenv()
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 
 # Delete existing index if it exists
-index_name = "verkada-docs-chunked"
+index_name = "verkada-docs-english"
 if pc.has_index(index_name):
     print(f"Deleting existing index '{index_name}'...")
     pc.delete_index(index_name)
@@ -134,7 +134,7 @@ BATCH_SIZE = 50  # Moderate batch size for better throughput
 
 # Note: We're including metadata as direct properties of the record
 # rather than as a nested metadata object to comply with Pinecone's requirements.
-namespace = "verkada-docs-chunked"
+namespace = "verkada-docs-english"
 
 def upsert_records_individually(index, namespace, batch):
     """
@@ -194,14 +194,14 @@ def upsert_records_individually(index, namespace, batch):
 
 if __name__ == "__main__":
     # Load documents from the chunked directory
-    source_dir = os.path.expanduser("~/Downloads/verkada_scrape/chunked")
+    source_dir = os.path.expanduser("/Users/satwik/Downloads/verkada_scrape/english_chunks")
     print(f"Loading chunked documents from {source_dir}...")
     documents = load_chunked_documents(source_dir)
     print(f"Loaded {len(documents)} document chunks")
 
     # Optionally filter for English documents only
-    # Uncomment the next line to filter for English documents
-    documents = filter_english_documents(documents)
+    # All documents are already English, no need for filtering
+    # documents = filter_english_documents(documents)  # Already English
 
     # Process batches with individual record handling
     total_success = 0

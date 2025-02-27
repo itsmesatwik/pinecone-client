@@ -13,6 +13,7 @@ index_cache = {}
 # This could be dynamically populated from Pinecone, but for simplicity we'll hardcode it
 AVAILABLE_INDEXES = {
     "verkada-docs": ["verkada-docs"],
+    "verkada-docs-chunked": ["verkada-docs-chunked"],
     "webpage-english-chunks": ["webpage-chunks"]
 }
 
